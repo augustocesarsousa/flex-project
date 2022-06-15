@@ -137,3 +137,23 @@ img {
 .presentation-image {
     margin-bottom: 40px;
 }
+
+.who-we-are-text {
+    margin-bottom: 15px;
+}
+
+.who-we-are-container {
+    margin-bottom: 20px;
+}
+
+.who-we-are-text h2 {
+    font-size: 28px;
+    color: var(--blue-150);
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 5px solid var(--blue-150);    
+}
+
+.who-we-are-text p {
+    margin-bottom: 10px;
+}
