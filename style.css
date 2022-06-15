@@ -1,3 +1,8 @@
+:root{
+    --blue-150: #122a57;
+    --white: #fff
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +16,7 @@ ul{
     padding: 0;
 }
 
-ul li a{
+ul, li, a{
     text-decoration: none;
 }
 
@@ -20,11 +25,16 @@ img {
 }
 
 .navbar {
-    min-height: 70px;
+    min-height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 0 10px;
+    background-color: var(--blue-150);
+}
+
+.navbar a{
+    color: var(--white);
 }
 
 .nav-menu-content {
@@ -41,7 +51,7 @@ img {
     left: 0;
     gap: 0;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--blue-150);
     width: 100%;
     text-align: center;
     transition: .3s ease;
@@ -53,7 +63,7 @@ img {
 }
 
 .nav-menu.active {
-    top: 70px;
+    top: 100px;
 }
 
 .nav-hamburger {
@@ -80,5 +90,9 @@ img {
     margin: 5px auto;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    background-color: black;
+    background-color: var(--white);
+}
+
+.flex-container {
+    padding: 0 10px;
 }
