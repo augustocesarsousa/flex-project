@@ -157,3 +157,39 @@ img {
 .who-we-are-text p {
     margin-bottom: 10px;
 }
+
+.services-container {
+    background-color: var(--blue-150);
+    color: var(--white);
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-title, .service-item img, .service-item p{
+    margin-bottom: 20px;   
+}
+
+.service-item p{
+    text-align: center; 
+    font-weight: bold;   
+}
+
+.service-item a{
+    background-color: var(--white);
+    color: var(--blue-150);
+    font-size: 13px;
+    font-weight: bold;    
+}
+
+.service-item a:hover{
+    background-color: var(--gray-100);
+}
