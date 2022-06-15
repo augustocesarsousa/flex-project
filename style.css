@@ -125,12 +125,12 @@ img {
     text-align: center;
 }
 
-.presentation-text a {
+.presentation-text a, .plan-item a {
     background-color: var(--blue-150);
     color: var(--white);
 }
 
-.presentation-text a:hover {
+.presentation-text a:hover, .plan-item a:hover {
     background-color: var(--blue-125);
 }
 
@@ -190,6 +190,58 @@ img {
     font-weight: bold;    
 }
 
-.service-item a:hover{
+.service-item a:hover {
     background-color: var(--gray-100);
+}
+
+.plans-container {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plans-container h2 {
+    font-size: 28px;
+    color: var(--blue-150);
+    margin-bottom: 15px;
+}
+
+.plan-item {
+    padding: 20px;
+    border: 5px solid var(--blue-150);
+    margin-bottom: 15px;
+    width: 300px;
+}
+
+.plan-item h3 {
+    text-align: center;
+    font-size: 24px;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid var(--blue-150);
+}
+
+.plan-item ul{
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.plan-item ul li{
+    margin-bottom: 5px;
+}
+
+.plan-item ul li::before{
+    content: "\25A0";
+    color: var(--blue-150);
+    font-weight: bold;
+    display: inline-block;
+    width: 1.2em;
+}
+
+.button-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
