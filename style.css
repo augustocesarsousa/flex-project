@@ -1,4 +1,5 @@
 :root{
+    --black: #000;
     --blue-125: #214b99;
     --blue-150: #122a57;
     --gray-100: #ccc;
@@ -35,8 +36,13 @@ img {
     background-color: var(--blue-150);
 }
 
-.navbar a{
+.nav-link, .nav-link:visited{
     color: var(--white);
+    transition: .3s all;
+}
+
+.nav-link:hover {
+    color: var(--gray-100);
 }
 
 .nav-menu-content {
@@ -60,6 +66,7 @@ img {
 }
 
 .nav-item {
+    list-style: none;
     width: 100%;
     padding: 15px;
 }
@@ -78,17 +85,17 @@ img {
 }
 
 .nav-hamburger.active .bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
 }
 
 .nav-hamburger.active .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .bar {
     display: block;
-    width: 25px;
-    height: 2px;
+    width: 30px;
+    height: 3px;
     margin: 5px auto;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -104,6 +111,8 @@ img {
 
 .flex-container {
     padding: 10px;
+    margin: auto;
+    max-width: 992px;
 }
 
 .presentation-text {
@@ -168,7 +177,7 @@ img {
 }
 
 .service-item {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -264,4 +273,156 @@ footer a, footer a:visited{
 
 footer a:hover{
     color: var(--gray-100);
+}
+
+.button-up {
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid var(--black);
+    background-color: rgba(0,0,0,.3);
+}
+
+.button-up img {
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+    transform: rotate(-90deg);
+}
+
+@media(min-width: 576px){
+    .flex-container {
+        padding: 10px 30px;
+    }
+}
+
+@media(min-width: 768px){
+    .flex-container {
+        padding: 10px 50px;
+    }
+}
+
+@media(min-width: 992px){
+
+    .flex-container {
+        padding: 50px;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
+    .nav-menu-content{        
+        width: auto;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        text-align: center;
+        transition: .3s ease;
+    }
+
+    .nav-item{
+        padding: 0;
+        margin-left: 20px;
+        width: auto;
+    }
+
+    .nav-hamburger {
+        display: none;
+    }
+
+    .presentation-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .presentation-text {
+        height: 200px;
+        width: 35%;
+        justify-content: space-between;
+        margin: 0;
+        align-items: flex-start;
+    }
+
+    .presentation-image {
+        width: 65%;
+    }
+
+    .presentation-text h1 span {
+        display: block;
+    }
+
+    .presentation-image {
+        margin: 0;
+    }
+
+    .who-we-are-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .who-we-are-text {
+        width: 60%;
+    }
+
+    .who-we-are-image {
+        width: 40%;
+    }
+
+    .services-container {
+        align-items: flex-start;
+        padding: 30px 50px;
+    }
+
+    .service-items-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .service-item img {
+        width: 150px;
+    }
+
+    .plans-container {
+        align-items: flex-start;
+    }
+
+    .plan-items-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .plan-item {
+        width: 250px;
+        margin: 0;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
+    .button-up {
+        display: none;
+    }
 }
